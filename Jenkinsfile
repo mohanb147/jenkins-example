@@ -7,7 +7,7 @@ node {
             echo "Compiling.."
             sleep 5
         }
-   staeg('Test'){
+   stage('Test'){
       echo "Testing"
       echo "Done"
    }
