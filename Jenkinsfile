@@ -7,6 +7,10 @@ node {
             echo "Compiling.."
             sleep 5
         }
+   staeg('Test'){
+      echo "Testing"
+      echo "Done"
+   }
     }
         
     
