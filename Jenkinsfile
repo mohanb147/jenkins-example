@@ -2,31 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage ('Compile Stage') {
-
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn clean compile'
-                }
-            }
+        stage('Checkout the code'){
+       git credentialsId: '597fc282-88f7-4c83-8d50-a524a6818e5d', url: 'https://github.com/mohanb147/jenkins-example.git'
+    }
+    stage('BUILD'){
+        steps{
+            echo "Compiling.."
+            sleep 5
         }
-
-        stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
+    }
+        
     }
 }
