@@ -7,8 +7,8 @@ node {
             echo "Compiling.."
             sleep 5
         }
-   stage('Test-stage'){
-      echo "Testing"
+   stage('Devops'){
+      echo "Deploy the files"
       echo "Done"
    }
     }
