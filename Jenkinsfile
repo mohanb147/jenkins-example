@@ -7,8 +7,8 @@ node {
             echo "Compiling.."
             sleep 5
         }
-   stage('Test-stage'){
-      echo "Testing"
+   stage('master'){
+      echo "checking"
       echo "Done"
    }
     }
